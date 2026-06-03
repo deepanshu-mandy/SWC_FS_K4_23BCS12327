@@ -1,0 +1,9 @@
+const editTask = (id, updatedText) => {
+  setTasks(
+    tasks.map(task =>
+      task.id === id
+        ? { ...task, text: updatedText }
+        : task
+    )
+  );
+};
