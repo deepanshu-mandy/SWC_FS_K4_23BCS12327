@@ -1,0 +1,12 @@
+const addTask = () => {
+  if (!input.trim()) return;
+
+  const newTask = {
+    id: Date.now(),
+    text: input,
+    completed: false
+  };
+
+  setTasks([...tasks, newTask]);
+  setInput("");
+};
