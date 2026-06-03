@@ -1,0 +1,44 @@
+return (
+  <div>
+    <input
+      value={input}
+      onChange={(e) => setInput(e.target.value)}
+      placeholder="Enter task"
+    />
+
+    <button onClick={addTask}>
+      Add Task
+    </button>
+
+    {tasks.map(task => (
+      <div key={task.id}>
+        <input
+          type="checkbox"
+          checked={task.completed}
+          onChange={() => toggleTask(task.id)}
+        />
+
+        <span>
+          {task.text}
+        </span>
+
+        <button
+          onClick={() =>
+            editTask(
+              task.id,
+              prompt("Edit Task", task.text)
+            )
+          }
+        >
+          Edit
+        </button>
+
+        <button
+          onClick={() => deleteTask(task.id)}
+        >
+          Delete
+        </button>
+      </div>
+    ))}
+  </div>
+);
