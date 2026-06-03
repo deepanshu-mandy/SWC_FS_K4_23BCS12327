@@ -1,0 +1,4 @@
+<Carousel images={images} />
+
+const [current, setCurrent] = useState(0);
+const [paused, setPaused] = useState(false);
