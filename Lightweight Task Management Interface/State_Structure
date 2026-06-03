@@ -1,0 +1,8 @@
+const [tasks, setTasks] = useState([]);
+const [input, setInput] = useState("");
+
+{
+  id: 1,
+  text: "Learn React",
+  completed: false
+}
