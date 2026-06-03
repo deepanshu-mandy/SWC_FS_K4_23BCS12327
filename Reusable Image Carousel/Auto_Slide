@@ -1,0 +1,9 @@
+useEffect(() => {
+  if (paused) return;
+
+  const timer = setInterval(() => {
+    nextSlide();
+  }, 3000);
+
+  return () => clearInterval(timer);
+}, [paused]);
