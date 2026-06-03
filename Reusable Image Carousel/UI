@@ -1,0 +1,20 @@
+return (
+  <div
+    onMouseEnter={() => setPaused(true)}
+    onMouseLeave={() => setPaused(false)}
+  >
+    <img
+      src={images[current]}
+      alt="carousel"
+      width="400"
+    />
+
+    <button onClick={prevSlide}>
+      Prev
+    </button>
+
+    <button onClick={nextSlide}>
+      Next
+    </button>
+  </div>
+);
