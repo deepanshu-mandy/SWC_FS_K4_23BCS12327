@@ -1,0 +1,38 @@
+<form onSubmit={handleSubmit}>
+  <input
+    type="email"
+    value={email}
+    onChange={(e) =>
+      setEmail(e.target.value)
+    }
+    placeholder="Email"
+  />
+
+  {!emailValid && email && (
+    <p>Invalid Email</p>
+  )}
+
+  <input
+    type="password"
+    value={password}
+    onChange={(e) =>
+      setPassword(e.target.value)
+    }
+    placeholder="Password"
+  />
+
+  {!passwordValid && password && (
+    <p>
+      Password must contain 8 characters
+      and a special symbol
+    </p>
+  )}
+
+  <button
+    disabled={
+      !emailValid || !passwordValid
+    }
+  >
+    Login
+  </button>
+</form>
